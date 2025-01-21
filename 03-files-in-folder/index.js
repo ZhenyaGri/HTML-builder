@@ -11,7 +11,7 @@ const filePath = path.join(__dirname, 'secret-folder');
         const stats = await fs.stat(path.join(filePath, file.name));
         const extension = path.extname(file.name);
         const nameWithoutExtension = path.basename(file.name, extension);
-        const extensionWithoutDot = extension.substring(1);
+        const extensionWithoutDot = extension.slice(1);
         console.log(
           `${nameWithoutExtension} - ${extensionWithoutDot} - ${stats.size}b`,
         );
